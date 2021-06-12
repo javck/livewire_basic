@@ -39,6 +39,7 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    @livewireStyles
     @yield('css')
 
     <meta property="og:title" content="{{ setting('site.title') }}" />
@@ -177,6 +178,7 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     @yield('js')
     {!! setting('site.javascript_embedded') !!}
+    @livewireScripts
 </body>
 
 </html>
