@@ -46,6 +46,11 @@ Route::group(['prefix' => '/demo', 'namespace' => '\App\Http\Controllers'], func
 
 Route::get('/', '\App\Http\Controllers\SiteController@renderWelcomePage');
 Route::view('/404-page', '404-page');
+Route::get('/form-validate', '\App\Http\Controllers\ExampleController@form_validate');
+Route::post('/send-mail', '\App\Http\Controllers\ExampleController@sendMail');
+
+
+
 
 //後台====================================
 $middleware = ['web', 'javck.roleCheck', 'javck.verifyEnabled'];
